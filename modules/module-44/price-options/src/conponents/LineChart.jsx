@@ -1,4 +1,4 @@
-
+import { LineChart as LChart, Line } from 'recharts';
 const LineChart = () => {
     const studentResults = [
         { id: 1, name: 'Alice', math: 75, physics: 80, chemistry: 78 },
@@ -10,7 +10,10 @@ const LineChart = () => {
 
     return (
         <div>
-
+            <LChart width={500} height={400} data={studentResults}>
+                <Line dataKey='math'></Line>
+                <Line dataKey='physics' stroke='green'></Line>
+            </LChart>
         </div>
     );
 };
