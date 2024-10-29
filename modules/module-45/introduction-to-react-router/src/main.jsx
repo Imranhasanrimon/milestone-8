@@ -11,22 +11,7 @@ import Home from './components/Home.jsx';
 import About from './components/About.jsx';
 import Contact from './components/Contact.jsx';
 import Users from './components/Users.jsx';
-const router = createBrowserRouter([
 
-  {
-    path: '/',
-    element: <Home></Home>,
-    children: [
-
-      {
-        path: '/contact',
-        element: <Contact></Contact>
-      },
-
-    ]
-  },
-
-])
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router}></RouterProvider>
