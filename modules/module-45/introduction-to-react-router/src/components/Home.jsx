@@ -1,13 +1,17 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation, useNavigation } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 
 const Home = () => {
+    const nav = useNavigation();
+    const currentLocation = useLocation();
+    console.log(currentLocation);
     return (
         <div>
             <Header></Header>
-            {/* <h2 className="border-2 py-1 px-2 rounded-md font-semibold">this is the <span className="font-bold bg-primary p-1">HOME</span> component</h2> */}
-            <Outlet></Outlet>
+            {
+                nav.state === 'loading' ? <h1>Loading</h1> : <Outlet></Outlet>
+            }
             <Footer></Footer>
         </div>
     );
