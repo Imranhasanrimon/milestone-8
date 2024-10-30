@@ -7,7 +7,7 @@ const User = ({ user }) => {
             <h3>{name}</h3>
             <p>Email: {email}</p>
             <p>Phone: {phone}</p>
-            <Link to={`/users/${id}`}>Details</Link>
+            <Link to={`/users/${id}`}><button className="btn btn-sm">Details</button></Link>
         </div>
     );
 };

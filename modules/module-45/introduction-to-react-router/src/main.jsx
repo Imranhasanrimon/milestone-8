@@ -32,7 +32,7 @@ const routerrr = createBrowserRouter([
       },
       {
         path: '/users/:userId',
-        loader: ({ params }) => console.log(params.userId),
+        loader: ({ params }) => fetch(`https://jsonplaceholder.typicode.com/users/${params.userId}`),
         element: <UserDetail></UserDetail>
       }
     ]
