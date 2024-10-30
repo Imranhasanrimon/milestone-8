@@ -1,11 +1,14 @@
+import { Link } from "react-router-dom";
 
 const Header = () => {
     return (
         <div>
             <h2>Navbar</h2>
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/contact">Contact</a>
+            <div className="flex gap-4 justify-center">
+                <Link to="/">Home</Link>
+                <Link to="/about">About</Link>
+                <Link to="/contact">Contact</Link>
+            </div>
 
         </div>
     );
