@@ -6,16 +6,17 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Home from './components/Home.jsx';
 
-const router = createBrowserRouter([
+const routerrr = createBrowserRouter([
   {
     path: '/',
-    element: <div>hello from react router</div>
+    element: <Home></Home>
   }
 ])
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <RouterProvider router={routerrr}></RouterProvider>
   </StrictMode>
 )
