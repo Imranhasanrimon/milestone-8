@@ -5,11 +5,13 @@ const [email,setEmail] = useState(null);
 
     const handleOnSubmit = e =>{
         e.preventDefault()
-        // console.log(e)
+       console.log(email);
     }
-const handleEmailChange = e =>{
-    console.log(e.target.value);
-}
+
+    const handleEmailChange = e =>{
+     setEmail(e.target.value);
+    }
+
     return (
         <div>
              <form onSubmit={handleOnSubmit} className="space-y-2">
