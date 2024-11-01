@@ -8,6 +8,8 @@ import {
 import Root from './components/Root';
 import ErrorPage from './components/ErrorPage';
 import Home from './components/Home';
+import DashBoard from './components/DashBoard';
+import BookDetail from './components/BookDetail';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +20,14 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>
+      },
+      {
+        path: '/books/:bookId',
+        element: <BookDetail></BookDetail>
+      },
+      {
+        path: '/dashboard',
+        element: <DashBoard></DashBoard>
       }
     ]
   },
