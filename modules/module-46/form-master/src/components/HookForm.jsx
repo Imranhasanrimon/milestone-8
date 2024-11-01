@@ -4,7 +4,7 @@ const HookForm = () => {
     const nameState = useInputState('Mr. Abul Hooked');
 
     const handleOnSubmit = (e) => {
-        console.log({ ...nameState });
+        console.log(nameState.value);
         e.preventDefault()
     }
     return (
