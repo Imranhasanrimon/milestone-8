@@ -2,12 +2,12 @@ import Brother from "./Brother";
 import MySelf from "./MySelf";
 import Sister from "./Sister";
 
-const Dad = () => {
+const Dad = ({ asset }) => {
     return (
         <div>
             <h2>Dad</h2>
             <section className="cFlex">
-                <MySelf></MySelf>
+                <MySelf asset={asset}></MySelf>
                 <Brother></Brother>
                 <Sister></Sister>
             </section>
