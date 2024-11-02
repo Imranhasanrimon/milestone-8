@@ -12,10 +12,10 @@ const PriceOption = ({ option }) => {
 
             <ul className="flex-grow">
                 {
-                    features.map((feature, indx) => <li className="flex items-center" key={indx}>{<RiFocus2Line className="mr-2" />}{feature}</li>)
+                    features.map((feature, indx) => <li className="flex items-center" key={indx}>{<RiFocus2Line className="mr-2 text-sm text-green-300" />}{feature}</li>)
                 }
             </ul>
-            <button className="btn w-full text-white font-bold">Buy Now</button>
+            <button className="btn w-full text-white hover:bg-gray-600 border-0 font-bold">Buy Now</button>
         </div>
     );
 };

@@ -1,4 +1,5 @@
 import PriceOption from "./PriceOption";
+import { LineChart, Line, XAxis, YAxis } from 'recharts';
 
 const PriceOptions = () => {
     const priceOptions = [
@@ -43,16 +44,68 @@ const PriceOptions = () => {
             price: 75, // price in USD per month
         },
     ];
-
+    const data = [
+        {
+            name: 'Page A',
+            uv: 4000,
+            pv: 2400,
+            amt: 2400,
+        },
+        {
+            name: 'Page B',
+            uv: 3000,
+            pv: 1398,
+            amt: 2210,
+        },
+        {
+            name: 'Page C',
+            uv: 2000,
+            pv: 9800,
+            amt: 2290,
+        },
+        {
+            name: 'Page D',
+            uv: 2780,
+            pv: 3908,
+            amt: 2000,
+        },
+        {
+            name: 'Page E',
+            uv: 1890,
+            pv: 4800,
+            amt: 2181,
+        },
+        {
+            name: 'Page F',
+            uv: 2390,
+            pv: 3800,
+            amt: 2500,
+        },
+        {
+            name: 'Page G',
+            uv: 3490,
+            pv: 4300,
+            amt: 2100,
+        },
+    ];
     return (
-        <div className="mx-2 border rounded-lg p-2">
-            <h2 className="text-3xl text-center font-bold py-2">Best price in the town</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {
-                    priceOptions.map(option => <PriceOption key={option.id} option={option}></PriceOption>)
-                }
+        <>
+            <div className="mx-2 border rounded-lg p-2">
+                <h2 className="text-3xl text-center font-bold py-2">Best price in the town</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {
+                        priceOptions.map(option => <PriceOption key={option.id} option={option}></PriceOption>)
+                    }
+                </div>
             </div>
-        </div>
+            <LineChart className="border" width={500} height={300} data={data}>
+                <Line dataKey={'uv'}></Line>
+                <Line dataKey={'pv'}></Line>
+                <Line dataKey={'amt'}></Line>
+                <XAxis dataKey={'name'}></XAxis>
+                <YAxis></YAxis>
+            </LineChart>
+        </>
     );
 };
 
