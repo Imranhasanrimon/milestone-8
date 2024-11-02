@@ -1,5 +1,6 @@
 import PriceOption from "./PriceOption";
-import { LineChart, Line, XAxis, YAxis } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, Tooltip, Legend } from 'recharts';
+
 
 const PriceOptions = () => {
     const priceOptions = [
@@ -99,11 +100,14 @@ const PriceOptions = () => {
                 </div>
             </div>
             <LineChart className="border" width={500} height={300} data={data}>
-                <Line dataKey={'uv'}></Line>
-                <Line dataKey={'pv'}></Line>
-                <Line dataKey={'amt'}></Line>
+                <Line dataKey={'uv'} stroke="red"></Line>
+                <Line dataKey={'pv'} stroke="green"></Line>
+                <Line dataKey={'amt'} stroke="blue"></Line>
                 <XAxis dataKey={'name'}></XAxis>
                 <YAxis></YAxis>
+                <Tooltip></Tooltip>
+                <Legend></Legend>
+
             </LineChart>
         </>
     );
