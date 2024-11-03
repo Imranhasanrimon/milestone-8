@@ -1,11 +1,14 @@
-import { useParams } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
+import Card from "./Card";
 
 const CoffeeCards = () => {
     const obj = useParams();
-    console.log(obj);
+    const data = useLoaderData();
     return (
-        <div>
-            <h1>Coffe Cards.........</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            {
+                data.map(coffee => <Card key={coffee.id} coffee={coffee}></Card>)
+            }
         </div>
     );
 };
