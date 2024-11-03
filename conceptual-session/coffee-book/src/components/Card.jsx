@@ -1,11 +1,14 @@
+import PropTypes from "prop-types";
 
 const Card = ({ coffee }) => {
-    const { name, id } = coffee || {};
+    const { name } = coffee || {};
     return (
         <div>
             <h1>{name}</h1>
         </div>
     );
 };
-
+Card.propTypes = {
+    coffee: PropTypes.object.isRequired,
+}
 export default Card;
