@@ -19,12 +19,12 @@ const CoffeeCards = () => {
 
     return (
         <>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-8 gap-4">
                 {
                     coffees.map(coffee => <Card key={coffee.id} coffee={coffee}></Card>)
                 }
             </div>
-            <button onClick={() => goToCoffees('/coffees')} className="btn btn-warning">View All</button>
+            <button onClick={() => goToCoffees('/coffees')} className="btn btn-warning mb-12">View All</button>
         </>
     );
 };
