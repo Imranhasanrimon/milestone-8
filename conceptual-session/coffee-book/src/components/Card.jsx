@@ -6,6 +6,7 @@ const Card = ({ coffee }) => {
     return (
         <div className="border p-4 rounded-lg">
             <Link
+                to={`/category/${id}`}
             >
                 <img className="h-80 w-full rounded-lg" src={image} alt="" />
                 <h1 className="text-xl font-semibold">Name: {name}</h1>
