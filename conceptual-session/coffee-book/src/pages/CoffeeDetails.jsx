@@ -11,6 +11,9 @@ const CoffeeDetails = () => {
     return (
         <div>
             <img className="w-full h-96 rounded-xl object-cover" src={image} alt="" />
+            <div className="flex justify-end">
+                <button className="btn btn-warning my-4 ">Add Favourite</button>
+            </div>
             <h1 className="text-3xl font-semibold">{name}</h1>
             <p>{description}</p>
             <p>Category: {category}</p>
