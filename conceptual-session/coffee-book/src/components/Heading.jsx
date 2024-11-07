@@ -1,4 +1,5 @@
 
+
 const Heading = ({ title, subTitle }) => {
     return (
         <div className="text-center">

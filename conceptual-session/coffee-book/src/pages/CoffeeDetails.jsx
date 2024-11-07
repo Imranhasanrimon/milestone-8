@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 
 const CoffeeDetails = () => {
@@ -10,6 +11,9 @@ const CoffeeDetails = () => {
     const goBack = useNavigate();
     return (
         <div>
+            <Helmet>
+                <title>Details</title>
+            </Helmet>
             <img className="w-full h-96 rounded-xl object-cover" src={image} alt="" />
             <div className="flex justify-end">
                 <button className="btn btn-warning my-4 ">Add Favourite</button>
