@@ -11,3 +11,7 @@ createRoot(document.getElementById('root')).render(
     </HelmetProvider>
   </StrictMode>,
 )
+//steps of using Helmet title
+// 1.install nmp i react-helmet-async
+// 2.wrap RouterProvider in HelmetProvider
+// 3. use Helmet where you need
