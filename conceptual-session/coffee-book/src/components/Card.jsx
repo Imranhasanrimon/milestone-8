@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const Card = ({ coffee }) => {
+
     const { name, image, category, origin, type, id, rating, popularity } = coffee || {};
     return (
         <div className="border p-4 rounded-lg">

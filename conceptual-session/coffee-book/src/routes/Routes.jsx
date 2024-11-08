@@ -5,10 +5,12 @@ import Coffees from "../pages/Coffees";
 import Dashboard from "../pages/Dashboard";
 import CoffeeCards from "../components/CoffeeCards";
 import CoffeeDetails from "../pages/CoffeeDetails";
+import ErrorPage from "../components/ErrorPage";
 const routes = createBrowserRouter([
     {
         path: '/',
         element: <MainLayout></MainLayout>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',
