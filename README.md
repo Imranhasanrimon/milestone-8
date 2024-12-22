@@ -20,3 +20,7 @@
   Pet Adoption: https://peddy-adopting.netlify.app/
 
   Donation: https://imranhasanrimon.github.io/assignment-5/
+
+- Docs:
+  Assignment-11: https://docs.google.com/document/d/1JRAkXHi9f4NbdJRv1lnylznZFdqpUX_zTR_geIOph_0/edit?tab=t.0#heading=h.b5vh2tndhzvj
+  
